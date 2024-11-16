@@ -1,0 +1,11 @@
+<launch>
+  <!-- Meluncurkan node untuk mengontrol robot -->
+  <node name="robot_controller" pkg="robot_control" type="robot_control_node" output="screen">
+    <param name="robot_speed" value="1.0" />
+  </node>
+
+  <!-- Meluncurkan node sensor (misalnya lidar) -->
+  <node name="lidar_sensor" pkg="sensor_drivers" type="lidar_node" output="screen">
+    <param name="sensor_topic" value="/scan" />
+  </node>
+</launch>
